@@ -1,0 +1,37 @@
+@use "../../base/variables" as v;
+@use '../../base/mixins' as m;
+
+
+.experiencias{
+    margin-top: 40px;
+    .experiencias__heading{
+        margin-bottom: 15px;
+    }
+    .experiencias__descripcion{
+        font-size: 16px;
+    }
+    .experiencias__listado{
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        column-gap: 20px;
+        @include m.scrollHorizontal;
+    }
+}
+
+.experiencia{
+    margin-top: 20px;
+    .experiencia__imagen{
+        border-radius: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        @include m.telefono{
+            width: 300px;
+        }
+    }
+    .experiencia__titulo{
+        margin-bottom: 10px;
+    }
+    .experiencia__descripcion{
+        font-size: 16px;
+    }
+}

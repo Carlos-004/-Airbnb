@@ -1,0 +1,26 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.destinos{
+    margin-top: 40px;
+    .destinos__heading{
+        @include m.telefono{
+            line-height:24px;
+        }
+    }
+
+    .destinos__grid{
+        @include m.grid(4,20px);
+        margin-top: 30px;
+
+        @include m.telefono{
+            display: flex;  
+            flex-direction: column
+        }
+
+        .destino{
+            @include m.gridFr(1fr,1fr,10px);
+            place-items: center;
+        }
+    }
+}

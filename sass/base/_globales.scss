@@ -1,0 +1,45 @@
+@use "./variables" as v;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: v.$fuente_principal;
+    font-size: 16px;
+}
+
+p {
+    color: v.$negro;
+    font-size: 20px;
+}
+img {
+    width: 100%;
+}
+
+ul {
+    padding:0;
+    list-style: none;
+    margin: 0;
+}
+h1, h2, h3 {
+    margin: 0;
+}
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 32px;
+}
+h3 {
+    font-size: 24px;
+}
+a {
+    text-decoration: none;
+}
+.contenedor{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}

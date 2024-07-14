@@ -1,0 +1,29 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+
+.lugares{
+    margin-top: 40px;
+   
+
+    .lugares__grid{
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        column-gap: 40px;
+        @include m.scrollHorizontal;
+        @include m.tablet { 
+            @include m.grid(2, 20px);
+        }
+        @include m.desktop { 
+            @include m.grid(4, 20px);    
+        }
+    }
+}
+.lugar{
+    margin-top: 20px;
+    .lugar__imagen{
+        border-radius: 10px;
+        margin-bottom: 10px;
+        width: 300px;
+    }
+}

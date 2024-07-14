@@ -1,0 +1,51 @@
+@use '../../base/variables' as v;
+@use "../../base/mixins" as m;
+
+.footer{
+    background-color: v.$gris-Claro;
+    margin-top: 40px;
+    padding: 40px 0;
+
+    .footer__grid {
+        @include m.grid(5,20px);
+
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer__widget{
+            @include m.telefono{
+                margin-bottom: 20px;
+            }
+            .footer__heading{
+                margin-bottom: 20px;
+            }
+            .footer__menu{
+                display: flex;
+                flex-direction: column;
+                .footer__enlace{
+                    color: v.$negro;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+    .footer__barra{
+        margin-top: 20px;
+        border-top: solid 1px rgba(0, 0, 0, 0.154);
+        .footer__barranav{
+            display: flex;
+            justify-content: center;
+            @include m.telefono{
+                flex-direction: column;
+                justify-content: unset;
+            }
+
+            .footer__enlace--barra{
+                padding: 10px ;
+                color: v.$negro;
+            }
+        }
+    }
+}

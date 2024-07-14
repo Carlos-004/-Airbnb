@@ -1,0 +1,62 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.formulario{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: v.$blanco;
+    width: 850px;
+    border-radius: 30px;
+
+    @include m.telefono{
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+
+    @include m.tablet{
+        width: 100%;
+    }
+
+    .formulario__campo{
+        @include m.telefono{
+            display: grid;
+            place-items: center;
+            place-content: center;
+            width: 100%;
+        }
+        padding: 5px 12px;
+        &:hover{
+            background-color: v.$gris-Claro;
+            border-radius: 30px;
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+        }
+
+        .formulario__label{
+            font-weight: bold;
+        }
+        .formulario__input{
+            width: 100%;
+            border: none;
+            padding: 4px;
+        }
+    }
+
+    .formulario__campo{
+        display: block;
+        .formulario__submit{
+            background-color: v.$rojo;
+            color: v.$blanco;
+            border: none;
+            border-radius: 20px;
+            padding: 15px;
+            cursor: pointer;
+            text-transform: uppercase;
+            @include m.telefono{
+                width: 100%;
+            }
+        }
+    }
+}
